@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+body, html{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: white;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* @font-face{
+    font-family: myFont;
+    src:url(kin.otf);
+}
+h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th, select, option{
+    font-family: myFont;
+} */
+
+tr:nth-child(even) {  
+    background-color: #ffffff;  
+} 
+
+@media only screen and (max-width: 600px) {
+    .slotparent{
+        flex-direction: row;
+    }
+    .slotdiv{
+        flex-direction: column;
+    }
+    .rower{
+        flex-direction: column;
+    }
+}
