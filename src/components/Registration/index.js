@@ -1,7 +1,8 @@
 // import { useEffect, useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import firebase from '../../firebase';
-import '../All.css';
+import '../images/All.css';
+import nbalogo from '../images/nba.png'
 // import GetReady from '../getready.png';
 // import { useParams } from "react-router-dom";
 // import {useRef} from 'react';
@@ -263,34 +264,32 @@ const Registration = () =>{
 
 
     
-    return(
-        <div style={{height: '100vh', width: '100vw', backgroundImage: `url("wallpaper3.jpg")`, backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover'}} >
-
-
+    return( 
             <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
 
-                <div style={{display: 'flex', flexDirection: 'column', width: '400px', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
+                <div style={{display: 'flex', flexDirection: 'column', width: '50vw', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
 
+                    <div style={{display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', alignItems: 'center'}}>
+                        <img style={{width: '60vw'}} src={nbalogo} alt="THHLogo"/>
+                    </div>
+                    
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%', marginTop: '20px'}}>
-                        {/* <label style={{color:"black", fontWeight:"400"}}>NAME</label> */}
                         <input type="text" placeholder='NAME' id="Name" style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px'}}/> 
                     </div>
                     
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
-                        {/* <label style={{color:"black", fontWeight:"400"}}>EMAIL</label> */}
                         <input type="email" placeholder='EMAIL' id='email' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px' }} />
                     </div>
 
 
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
                         <div  style={{display: 'flex', flexDirection: 'column', justifyContent: 'right', width: '100%'}}>
-                            {/* <label style={{color:"black", fontWeight:"400"}}>MOBILE (971 xx xxx xxxx)</label> */}
                             <input type="number" placeholder='MOBILE (971 xx xxx xxxx)' id='no' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px' }} />
                         </div>
                     </div>
 
-                    <div style={{width:"100%", display: 'flex', flexDirection: 'column'}}>
-                        <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px'}}/>
+                    <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px', justifyContent: 'center', alignItems: 'center'}}/>
                     </div>
 
                     <div>
@@ -305,7 +304,6 @@ const Registration = () =>{
                 </div>
                 
             </div>
-        </div>
     )
 }
 
