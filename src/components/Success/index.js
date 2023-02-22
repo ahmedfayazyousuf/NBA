@@ -13,7 +13,7 @@ const Success = () => {
 
             <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "25vh", justifyContent:"center", alignItems:"center"}}>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end', alignItems: 'end'}}>
-                    <img style={{width: '110px', marginRight: '30px'}} src={basketball} alt="basketball"/>
+                    <img style={{width: '170px', marginRight: '30px', marginBottom: '20px'}} src={basketball} alt="basketball"/>
                 </div>
             </div>
         
