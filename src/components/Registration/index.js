@@ -99,14 +99,14 @@ const Registration = () =>{
     }
     
     return( 
-        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
+        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100%", justifyContent:"center", alignItems:"center"}}>
             
             <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "75%", justifyContent:"center", alignItems:"center"}}>
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
 
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px', marginTop: '50px'}}>
-                        <img style={{minWidth: '100px', maxWidth: '300px',}} src={nbalogo} alt="NBALogo"/>
+                        <img style={{minWidth: '100px', maxWidth: '300px'}} src={nbalogo} alt="NBALogo"/>
                     </div>
                     
                     <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
