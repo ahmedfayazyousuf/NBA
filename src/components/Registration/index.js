@@ -78,7 +78,7 @@ const Registration = () =>{
             return;
         }
 
-        if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) !== 971 ){
+        if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
             console.log('Hello')
             // buttonRef.current.disabled = false;
             document.getElementById('error').innerHTML = "PLEASE ENTER A VALID PHONE NUMBER"
