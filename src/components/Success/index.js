@@ -3,7 +3,7 @@ import basketball from '../images/basketball.jpg'
 
 const Success = () => {
     return(
-        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100%", justifyContent:"center", alignItems:"center"}}>
+        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
             
             <div style={{display:"flex", flexDirection:"column", width:"100%", height: "75%", justifyContent:"center", alignItems:"center", flexWrap: 'wrap', textAlign: 'center'}}>
                 <img style={{minWidth: '100px', maxWidth: '300px',}} src={tick} alt="tick"/>
