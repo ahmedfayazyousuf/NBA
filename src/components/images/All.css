@@ -2,12 +2,21 @@
 
 body, html{
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    background-color: white;
+    font-weight: 400;   
     height: 100vh;
     -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
+
+    background-image: url("desktopwallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: 0.6;
 }
+
+html{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 
 @font-face{
     font-family: myFont;
@@ -33,16 +42,10 @@ tr:nth-child(even) {
     }
 }
 
-button {
-    color:#fff;
-    border:none;
-    padding:10px 30px;
-    background:
-    linear-gradient(143deg,red 70%,transparent 72%) 100% 0/20px 100% no-repeat,
-    linear-gradient(-37deg,red 70%,transparent 72%) 0 0/20px 100% no-repeat,
 
-    linear-gradient(143deg,red 70%,transparent 72%) 100% 0/20px 100% no-repeat,
-    linear-gradient(-37deg,red 70%,transparent 72%) 0 0/20px 100% no-repeat,
-    
-    linear-gradient(red,red) 20px 0/calc(100% - 40px) 100% no-repeat;
+
+  @media only screen and (max-width: 600px) {
+    body,html {
+        background-image: url("mobilewallpaper.png");
+    }
   }

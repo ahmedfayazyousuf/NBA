@@ -99,55 +99,47 @@ const Registration = () =>{
     }
     
     return( 
-        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100%", justifyContent:"center", alignItems:"center"}}>
             
-            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "75%", justifyContent:"center", alignItems:"center"}}>
+        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
 
-                <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
+            <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
 
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px', marginTop: '50px'}}>
-                        <img style={{minWidth: '100px', maxWidth: '300px'}} src={nbalogo} alt="NBALogo"/>
-                    </div>
-                    
-                    <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                        <input type="text" placeholder='NAME' id="Name" style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px'}}/> 
-                    </div>
-                    
-                    <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                        <input type="email" placeholder='EMAIL' id='email' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px' }} />
-                    </div>
-
-
-                    <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                            <input type="number" placeholder='MOBILE (971 xx xxx xxxx)' id='no' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px' }} />
-                    </div>
-
-                    <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                        <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px', justifyContent: 'center', alignItems: 'center', paddingLeft: '10px', paddintTop: '10px', paddingRight: '10px', backgroundColor: 'transparent'}}/>
-                    </div>
-
-                    <div>
-                        <p id='error' style={{color:"red", marginBottom: '5px'}}>  </p>
-                    </div>
-
-
-                    {/* <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}}>        
-                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
-                    </div> */}
-
-                    <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}} onClick={HandleSubmit}>        
-                        <img style={{width: '150px',marginBottom: '30px'}} src={submit} alt="submit"/>
-                    </div>
-
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px', marginTop: '50px'}}>
+                    <img style={{minWidth: '100px', maxWidth: '300px'}} src={nbalogo} alt="NBALogo"/>
                 </div>
                 
-            </div>
-
-            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "25%", justifyContent:"center", alignItems:"center"}}>
-                <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end', alignItems: 'end'}}>
-                    <img style={{width: '170px', marginRight: '30px', marginBottom: '20px'}} src={basketball} alt="basketball"/>
+                <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    <input type="text" placeholder='NAME' id="Name" style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white'}}/> 
                 </div>
+                
+                <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    <input type="email" placeholder='EMAIL' id='email' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
+                </div>
+
+
+                <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        <input type="number" placeholder='MOBILE (971 xx xxx xxxx)' id='no' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
+                </div>
+
+                <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px', justifyContent: 'center', alignItems: 'center', paddingLeft: '10px', paddintTop: '10px', paddingRight: '10px', backgroundColor: 'transparent', backgroundColor: 'white'}}/>
+                </div>
+
+                <div>
+                    <p id='error' style={{color:"red", marginBottom: '5px'}}></p>
+                </div>
+
+
+                {/* <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}}>        
+                    <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
+                </div> */}
+
+                <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}} onClick={HandleSubmit}>        
+                    <img style={{width: '150px'}} src={submit} alt="submit"/>
+                </div>
+
             </div>
+            
         </div>
     )
 }
