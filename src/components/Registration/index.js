@@ -102,7 +102,7 @@ const Registration = () =>{
             
         <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
 
-            <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
+            <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px'}}>
                     <img style={{minWidth: '100px', maxWidth: '300px'}} src={nbalogo} alt="NBALogo"/>
