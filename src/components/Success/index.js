@@ -2,8 +2,6 @@ import tick from '../images/tick.png'
 import basketball from '../images/basketball.jpg'
 
 const Success = () => {
-
-
     return(
         <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
             
@@ -15,7 +13,7 @@ const Success = () => {
 
             <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "25vh", justifyContent:"center", alignItems:"center"}}>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end', alignItems: 'end'}}>
-                    <img style={{width: '200px', marginRight: '30px'}} src={basketball} alt="basketball"/>
+                    <img style={{width: '140px', marginRight: '30px'}} src={basketball} alt="basketball"/>
                 </div>
             </div>
         
