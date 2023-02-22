@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import firebase from '../../firebase';
 import '../images/All.css';
 import nbalogo from '../images/nba.png'
+import submit from '../images/submit.png'
 import basketball from '../images/basketball.jpg'
 // import GetReady from '../getready.png';
 // import { useParams } from "react-router-dom";
@@ -130,8 +131,12 @@ const Registration = () =>{
                     </div>
 
 
-                    <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}}>        
+                    {/* <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}}>        
                         <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
+                    </div> */}
+
+                    <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}} onClick={HandleSubmit}>        
+                        <img style={{width: '150px',}} src={submit} alt="submit"/>
                     </div>
 
                 </div>
