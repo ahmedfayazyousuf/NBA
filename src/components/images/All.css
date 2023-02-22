@@ -8,13 +8,13 @@ body, html{
     -webkit-overflow-scrolling: touch;
 }
 
-/* @font-face{
+@font-face{
     font-family: myFont;
-    src:url(kin.otf);
+    src:url(outagecut.ttf);
 }
-h1,h2,h3,h4,h5,h6,a,button,div, tr, td, table, th, select, option{
+*{
     font-family: myFont;
-} */
+}
 
 tr:nth-child(even) {  
     background-color: #ffffff;  
@@ -31,3 +31,17 @@ tr:nth-child(even) {
         flex-direction: column;
     }
 }
+
+button {
+    color:#fff;
+    border:none;
+    padding:10px 30px;
+    background:
+    linear-gradient(143deg,red 70%,transparent 72%) 100% 0/20px 100% no-repeat,
+    linear-gradient(-37deg,red 70%,transparent 72%) 0 0/20px 100% no-repeat,
+
+    linear-gradient(143deg,red 70%,transparent 72%) 100% 0/20px 100% no-repeat,
+    linear-gradient(-37deg,red 70%,transparent 72%) 0 0/20px 100% no-repeat,
+    
+    linear-gradient(red,red) 20px 0/calc(100% - 40px) 100% no-repeat;
+  }
