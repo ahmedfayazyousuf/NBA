@@ -105,7 +105,7 @@ const Registration = () =>{
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
 
-                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px', marginTop: '50px'}}>
                         <img style={{minWidth: '100px', maxWidth: '300px',}} src={nbalogo} alt="NBALogo"/>
                     </div>
                     
@@ -136,7 +136,7 @@ const Registration = () =>{
                     </div> */}
 
                     <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}} onClick={HandleSubmit}>        
-                        <img style={{width: '150px',}} src={submit} alt="submit"/>
+                        <img style={{width: '150px',marginBottom: '30px'}} src={submit} alt="submit"/>
                     </div>
 
                 </div>
