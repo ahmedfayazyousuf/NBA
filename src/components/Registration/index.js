@@ -101,7 +101,7 @@ const Registration = () =>{
     return( 
         <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
             
-            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "75vh", justifyContent:"center", alignItems:"center"}}>
+            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "75%", justifyContent:"center", alignItems:"center"}}>
 
                 <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'10px', alignItems: 'center', justifyContent:'center'}}>
 
@@ -143,7 +143,7 @@ const Registration = () =>{
                 
             </div>
 
-            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "25vh", justifyContent:"center", alignItems:"center"}}>
+            <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "25%", justifyContent:"center", alignItems:"center"}}>
                 <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end', alignItems: 'end'}}>
                     <img style={{width: '170px', marginRight: '30px', marginBottom: '20px'}} src={basketball} alt="basketball"/>
                 </div>
