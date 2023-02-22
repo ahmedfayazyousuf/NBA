@@ -1,20 +1,20 @@
 // import { useEffect, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import firebase from '../../firebase';
+import { useNavigate } from 'react-router-dom';
+import firebase from '../../firebase';
 import '../images/All.css';
 import nbalogo from '../images/nba.png'
 // import GetReady from '../getready.png';
 // import { useParams } from "react-router-dom";
-// import {useRef} from 'react';
+import {useRef} from 'react';
 // import axios from "axios";
 // import { Link } from "react-router-dom";
 // import {useLocation} from 'react-router-dom';
 
 const Registration = () =>{
     // const [numberr, setNumberr] = useState(false);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     // const location = useLocation();
-    // const buttonRef = useRef(null);
+    const buttonRef = useRef(null);
 
     // const [count, setCount] = useState(0);
     // const [emailB, setEmailB] = useState(false);
@@ -55,52 +55,46 @@ const Registration = () =>{
     //     }
     // }
 
-    // function HandleSubmit(){
-    //     console.log('2');
+    function HandleSubmit(){
+        console.log('2');
 
-    //     buttonRef.current.disabled = true;
-    //     const Users = firebase.firestore().collection("Users");
-    //     const Email = document.getElementById("email").value;
-    //     const Number = document.getElementById("no").value;
-    //     const Name = document.getElementById("Name").value;
+        // buttonRef.current.disabled = true;
+        const Users = firebase.firestore().collection("Users");
+        const Email = document.getElementById("email").value;
+        const Number = document.getElementById("no").value;
+        const Name = document.getElementById("Name").value;
+        const Msg = document.getElementById("message").value;
 
        
-    //     console.log(Email)
+        console.log(Email)
 
-    //     if(Name === ''){
-    //         buttonRef.current.disabled = false;
-    //         document.getElementById('error').innerHTML = "PLEASE ENTER YOUR NAME"
-    //         return;
-    //     }
+        if(Name === ''){
+            // buttonRef.current.disabled = false;
+            document.getElementById('error').innerHTML = "PLEASE ENTER YOUR NAME"
+            return;
+        }
 
-    //     if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
-    //         console.log('Hello')
-    //         buttonRef.current.disabled = false;
-    //         document.getElementById('error').innerHTML = "PLEASE ENTER A VALID PHONE NUMBER"
-    //         return;
+        if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
+            console.log('Hello')
+            // buttonRef.current.disabled = false;
+            document.getElementById('error').innerHTML = "PLEASE ENTER A VALID PHONE NUMBER"
+            return;
             
-    //     }
+        }
 
 
 
+        Users.add({
+            Name:Name,
+            Email:Email,
+            Number:Number,
+            Message: Msg,
+            time: firebase.firestore.FieldValue.serverTimestamp()
 
-    //     var area = location.state.time.slice(0,7)
-    //     var time = location.state.time.slice(7)
-    //     var date = location.state.date
-
-    //     Users.add({
-    //         Name:Name,
-    //         Email:Email,
-    //         Number:Number,
-    //         Time:time,
-    //         Area:area,
-    //         Date:date,
-    //         Status: "-",
-    //         KiteStatus: "-",
-    //         Select:select,
-    //         time: firebase.firestore.FieldValue.serverTimestamp()
-
-    //     }).then( function(docRef) {
+        }).then(()=>{
+            navigate('/Success')
+        })
+    }
     //         var area = location.state.time.slice(0,7)
     //         var time = location.state.time.slice(7)
 
@@ -298,7 +292,7 @@ const Registration = () =>{
 
 
                     <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}}>        
-                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white', fontSize: '25px'}} variant="contained">SUBMIT</button>
+                        <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
                     </div>
 
                 </div>

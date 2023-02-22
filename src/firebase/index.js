@@ -10,12 +10,13 @@ import "firebase/compat/firestore"
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAvPwmaLSK68ZNrD6qx_mh05_99UZ9iziY",
-  authDomain: "kitebooking-2f6e4.firebaseapp.com",
-  projectId: "kitebooking-2f6e4",
-  storageBucket: "kitebooking-2f6e4.appspot.com",
-  messagingSenderId: "787105546753",
-  appId: "1:787105546753:web:3852bb42fe900d2dc2b600"
+  apiKey: "AIzaSyBk0H5cVehvpUACCt33buLfRIDRtFIlK1o",
+  authDomain: "nba-registration.firebaseapp.com",
+  projectId: "nba-registration",
+  storageBucket: "nba-registration.appspot.com",
+  messagingSenderId: "1062017671050",
+  appId: "1:1062017671050:web:12dae018088523c5543273",
+  measurementId: "G-TVPXE6JCNX"
 };
 
 // Initialize Firebase
