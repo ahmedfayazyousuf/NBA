@@ -5,10 +5,13 @@ import '../images/All.css';
 import nbalogo from '../images/nba.png'
 import submit from '../images/submit.png'
 import {useRef} from 'react';
+import './style.scss'
+import { useState } from 'react';
 
 const Registration = () =>{
     const navigate = useNavigate();
     const buttonRef = useRef(null);
+    const [select, setSelect] = useState('m')  
 
     function HandleSubmit(){
         console.log('2');
@@ -44,11 +47,24 @@ const Registration = () =>{
             Number:Number,
             Country:Country,
             Message: Msg,
+            Gender: select,
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then(()=>{
             navigate('/Success')
         })
+    }
+
+    function check(){
+        if (select === 'm'){
+            setSelect('f')
+            console.log(select)
+        }
+        else{
+            setSelect('m')
+            console.log(select)
+
+        }
     }
     
     return( 
@@ -336,6 +352,14 @@ const Registration = () =>{
                         <option value="Zambia">Zambia</option>
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>
+                </div>
+
+                <div style={{width:"100%", display: 'flex', flexDirection: 'column',background:'fff'}}>
+                    <label style={{color:"#fff", fontWeight:"400", marginBottom: '10px'}}>Gender</label>
+                    <div class="switch-button">
+                        <input className="switch-button-checkbox" id='check' type="checkbox" onClick={check}></input>
+                        <label className="switch-button-label" for=""><span className="switch-button-label-span">MALE</span></label>
+                    </div>
                 </div>
 
 
