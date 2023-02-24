@@ -356,12 +356,16 @@ const Registration = () =>{
 
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column',background:'fff'}}>
                     {/* <label style={{color:"#fff", fontWeight:"400", marginBottom: '10px'}}>Gender</label> */}
-                    <div class="switch-button">
+                    <div class="switch-button" style={{marginTop: '16px'}}>
                         <input className="switch-button-checkbox" id='check' type="checkbox" onClick={check}></input>
                         <label className="switch-button-label" for=""><span className="switch-button-label-span">MALE</span></label>
                     </div>
                 </div>
-
+                
+                <div className="form-check" style={{marginTop: '10px'}}>
+                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" style={{backgroundColor: '#061A1B', borderColor: 'white'}}/>
+                    <label className="form-check-label" style={{fontSize: '12px', color: 'white'}}>* I consent to the use of my personal information by the NBA 2K League and its affiliates, NBA Media Ventures, and Take-Two Interactive Software to provide me with information about the NBA 2K League and other promotional information and for business purposes, in accordance with the NBA.com Network Privacy Policy and Take-Two Interactive Software Inc. Privacy Policy.</label>
+                </div>
 
                 <div>
                     <p id='error' style={{color:"red", marginBottom: '5px'}}></p>
