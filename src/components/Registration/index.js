@@ -23,6 +23,7 @@ const Registration = () =>{
         const Number = document.getElementById("no").value;
         const Name = document.getElementById("Name").value;
         const Msg = document.getElementById("message").value;
+        const Check = document.getElementById("invalidCheck").checked;
 
        
         console.log(Email)
@@ -39,6 +40,11 @@ const Registration = () =>{
             document.getElementById('error').innerHTML = "PLEASE ENTER A VALID PHONE NUMBER"
             return;
             
+        }
+
+        if(Check === false){
+            document.getElementById('error').innerHTML = "PLEASE CHECK THE CONSENT"
+            return
         }
 
         Users.add({
