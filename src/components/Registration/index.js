@@ -77,7 +77,7 @@ const Registration = () =>{
             
         <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center", overflowY:'scroll'}}>
 
-            <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
+            <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', height: "100vh", alignItems: 'center', justifyContent:'center'}}>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px'}}>
                     <img style={{minWidth: '100px', maxWidth: '300px'}} src={nbalogo} alt="NBALogo"/>
@@ -370,7 +370,7 @@ const Registration = () =>{
                 
                 <div className="form-check" style={{marginTop: '10px'}}>
                     <input className="form-check-input" type="checkbox" value="" id="invalidCheck" style={{backgroundColor: '#061A1B', borderColor: 'white'}}/>
-                    <label className="form-check-label" style={{fontSize: '12px', color: 'white'}}>* I consent to the use of my personal information by the NBA 2K League and its affiliates, NBA Media Ventures, and Take-Two Interactive Software to provide me with information about the NBA 2K League and other promotional information and for business purposes, in accordance with the NBA.com Network Privacy Policy and Take-Two Interactive Software Inc. Privacy Policy.</label>
+                    <label className="form-check-label" style={{fontSize: '10px', color: 'white'}}>* I consent to the use of my personal information by the NBA 2K League and its affiliates, NBA Media Ventures, and Take-Two Interactive Software to provide me with information about the NBA 2K League and other promotional information and for business purposes, in accordance with the NBA.com Network Privacy Policy and Take-Two Interactive Software Inc. Privacy Policy.</label>
                 </div>
 
                 <div>
