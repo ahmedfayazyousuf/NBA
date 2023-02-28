@@ -5,6 +5,7 @@ import '../images/All.css';
 import nbalogo from '../images/nba.png'
 import submit from '../images/submit.png'
 import {useRef} from 'react';
+import './style.scss'
 import { useState } from 'react';
 
 const Registration = () =>{
