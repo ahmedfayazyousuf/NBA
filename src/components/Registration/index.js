@@ -1,17 +1,52 @@
-
+// import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import firebase from '../../firebase';
 import '../images/All.css';
 import nbalogo from '../images/nba.png'
 import submit from '../images/submit.png'
-import {useRef} from 'react';
-import './style.scss'
+import basketball from '../images/basketball.jpg'
 import { useState } from 'react';
+import './style.scss'
+// import GetReady from '../getready.png';
+// import { useParams } from "react-router-dom";
+// eslint-disable-next-line
+import {useRef} from 'react';
+// import axios from "axios";
+// import { Link } from "react-router-dom";
+// import {useLocation} from 'react-router-dom';
 
 const Registration = () =>{
+    // const [numberr, setNumberr] = useState(false);
     const navigate = useNavigate();
+    // const location = useLocation();
+    // eslint-disable-next-line
     const buttonRef = useRef(null);
-    const [select, setSelect] = useState('m')  
+    const [select, setSelect] = useState('m')
+
+//    function onlyOnetwo(e) {
+//         var checkm = document.getElementById('checkm');
+//         var checkf = document.getElementById('checkf');
+//         // checkm.checked = !checkm.checked 
+//         // checkf.checked = !checkf.checked 
+//         // console.log(checkbox)
+
+//         if(e === 'm'){
+
+//             checkf.checked = false
+//             setSelect("m")
+            
+//             // setUser({...user, [firstname]:value})
+//         }
+
+//         if(e === 'f'){
+
+            
+//             checkm.checked = false
+//             setSelect("f")
+
+//             // setUser({...user, [firstname]:value})
+//         }
+//     }
 
     function HandleSubmit(){
         console.log('2');
@@ -19,12 +54,11 @@ const Registration = () =>{
         // buttonRef.current.disabled = true;
         const Users = firebase.firestore().collection("Users");
         const Email = document.getElementById("email").value;
-        const Country = document.getElementById("country").value;
         const Number = document.getElementById("no").value;
         const Name = document.getElementById("Name").value;
         const Msg = document.getElementById("message").value;
+        const Country = document.getElementById("country").value;
         const Check = document.getElementById("invalidCheck").checked;
-
        
         console.log(Email)
 
@@ -42,6 +76,11 @@ const Registration = () =>{
             
         }
 
+        if(select === ''){
+            document.getElementById('error').innerHTML = "PLEASE SELECT YOUR GENDER"
+            return;
+        }
+
         if(Check === false){
             document.getElementById('error').innerHTML = "PLEASE CHECK THE CONSENT"
             return
@@ -51,9 +90,9 @@ const Registration = () =>{
             Name:Name,
             Email:Email,
             Number:Number,
-            Country:Country,
             Message: Msg,
             Gender: select,
+            Country:Country,
             time: firebase.firestore.FieldValue.serverTimestamp()
 
         }).then(()=>{
@@ -75,33 +114,34 @@ const Registration = () =>{
     
     return( 
             
-        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
+        <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100%", justifyContent:"center", alignItems:"center"}}>
 
             <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
 
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '30px'}}>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginBottom: '18px', paddingTop:'45px'}}>
                     <img style={{minWidth: '100px', maxWidth: '300px'}} src={nbalogo} alt="NBALogo"/>
                 </div>
 
-                <h1 style={{paddingRight: '50px', paddingLeft: '50px', color: 'white', fontSize: '20px'}}>Registration</h1>
-                
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vh', marginBottom:'10px'}}>
+                    <h1 style={{paddingRight: '50px', paddingLeft: '50px', color: 'white', fontSize: '20px'}}>Registration</h1>
+                </div>
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <input type="text" placeholder='NAME' id="Name" style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", backgroundColor: 'white'}}/> 
+                    <input type="text" placeholder='NAME' id="Name" style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white'}}/> 
                 </div>
                 
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <input type="email" placeholder='EMAIL' id='email' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", backgroundColor: 'white' }} />
+                    <input type="email" placeholder='EMAIL' id='email' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
                 </div>
 
 
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                        <input type="number" placeholder='MOBILE (971 xx xxx xxxx)' id='no' style={{borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", backgroundColor: 'white' }} />
+                        <input type="number" placeholder='MOBILE (971 xx xxx xxxx)' id='no' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
                 </div>
 
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px', justifyContent: 'center', alignItems: 'center', paddingTop: '10px', backgroundColor: 'transparent', backgroundColor: 'white'}}/>
+                    <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px', justifyContent: 'center', alignItems: 'center', paddingLeft: '10px', paddingTop: '10px', paddingRight: '10px', backgroundColor: 'transparent', backgroundColor: 'white'}}/>
                 </div>
-                
+
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                     <select type="text" id="country" name="country" style={{width:"100%", padding: '10px', borderRadius: '10px', marginTop: '13px'}}>
                         <option>country</option>
@@ -370,7 +410,7 @@ const Registration = () =>{
                 
                 <div className="form-check" style={{marginTop: '10px'}}>
                     <input className="form-check-input" type="checkbox" value="" id="invalidCheck" style={{backgroundColor: '#061A1B', borderColor: 'white'}}/>
-                    <label className="form-check-label" style={{fontSize: '12px', color: 'white'}}>* I consent to the use of my personal information by the NBA 2K League and its affiliates, NBA Media Ventures, and Take-Two Interactive Software to provide me with information about the NBA 2K League and other promotional information and for business purposes, in accordance with the NBA.com Network Privacy Policy and Take-Two Interactive Software Inc. Privacy Policy.</label>
+                    <label className="form-check-label" style={{fontSize: '10px', color: 'white'}}>* I consent to the use of my personal information by the NBA 2K League and its affiliates, NBA Media Ventures, and Take-Two Interactive Software to provide me with information about the NBA 2K League and other promotional information and for business purposes, in accordance with the NBA.com Network Privacy Policy and Take-Two Interactive Software Inc. Privacy Policy.</label>
                 </div>
 
                 <div>
@@ -382,11 +422,9 @@ const Registration = () =>{
                     <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
                 </div> */}
 
-                <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}} onClick={HandleSubmit}>        
+                <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center', marginBottom:'60px'}} onClick={HandleSubmit}>        
                     <img style={{width: '150px'}} src={submit} alt="submit"/>
                 </div>
-
-                
 
             </div>
             

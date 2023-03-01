@@ -4,19 +4,17 @@
     margin: 0;
   }
   
-  body {
-    background-color: #155FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: sans-serif;
-  }
+  // body {
+  //   background-color: #155FFF;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   font-family: sans-serif;
+  // }
   
   .switch-button {
     background: rgba(255, 255, 255, 0.56);
-    border-radius: 30px;
-    overflow: hidden;
+    border-radius: 10px;
     width: 240px;
     text-align: center;
     font-size: 18px;
@@ -71,7 +69,7 @@
           position: absolute;
           left: 0;
           top: 0;
-          border-radius: 30px;
+          border-radius: 10px;
           transform: translateX(0);
           transition: transform 300ms;
         }
