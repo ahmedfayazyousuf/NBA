@@ -123,7 +123,7 @@ const Registration = () =>{
                 </div>
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vh', marginBottom:'10px'}}>
-                    <h1 style={{paddingRight: '50px', paddingLeft: '50px', color: 'white', fontSize: '20px'}}>Raffle Registration</h1>
+                    <h1 style={{paddingRight: '50px', paddingLeft: '50px', color: 'white', fontSize: '20px'}}>Registration</h1>
                 </div>
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                     <input type="text" placeholder='NAME' id="Name" style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white'}}/> 
@@ -422,7 +422,7 @@ const Registration = () =>{
                     <button className="grab"  style={{cursor: 'grab', width: '250px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white', fontSize: '25px'}} variant="contained" onClick={HandleSubmit}>SUBMIT</button>
                 </div> */}
 
-                <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}} onClick={HandleSubmit}>        
+                <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center', marginBottom:'60px'}} onClick={HandleSubmit}>        
                     <img style={{width: '150px'}} src={submit} alt="submit"/>
                 </div>
 
