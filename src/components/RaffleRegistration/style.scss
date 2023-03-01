@@ -6,10 +6,8 @@
   
   body {
     background-color: #155FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
   
   .switch-button {
