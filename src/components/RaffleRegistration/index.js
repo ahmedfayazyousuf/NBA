@@ -67,12 +67,20 @@ const Registration = () =>{
             return;
         }
         // eslint-disable-next-line
-        if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
+        if (document.getElementById("no").value === "" ){
             console.log('Hello')
             // buttonRef.current.disabled = false;
             document.getElementById('error').innerHTML = "PLEASE ENTER A VALID PHONE NUMBER"
             return;
             
+        }
+
+        var validRegex =   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+        if (Email === "" || !Email.match(validRegex))
+        {
+            document.getElementById('error').innerHTML = "PLEASE ENTER A VALID EMAIL"
+            return;
         }
 
         if(select === ''){
