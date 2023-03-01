@@ -4,7 +4,6 @@ import firebase from '../../firebase';
 import '../images/All.css';
 import nbalogo from '../images/nba.png'
 import submit from '../images/submit.png'
-import basketball from '../images/basketball.jpg'
 import { useState } from 'react';
 import './style.scss'
 // import GetReady from '../getready.png';
@@ -67,7 +66,7 @@ const Registration = () =>{
             document.getElementById('error').innerHTML = "PLEASE ENTER YOUR NAME"
             return;
         }
-
+        // eslint-disable-next-line
         if (document.getElementById("no").value === "" ||  document.getElementById("no").value.slice(0,3) != 971 ){
             console.log('Hello')
             // buttonRef.current.disabled = false;
@@ -139,7 +138,7 @@ const Registration = () =>{
                 </div>
 
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px', justifyContent: 'center', alignItems: 'center', paddingLeft: '10px', paddingTop: '10px', paddingRight: '10px', backgroundColor: 'transparent', backgroundColor: 'white'}}/>
+                    <textarea className="form-control" type="textarea" name="message" id="message" rows='3' placeholder="For us, the answer is Yes. Now, what's your question?" required style={{height: '115px', marginBottom: '0px', width: '100%', border: '1px solid black', borderRadius: '10px', justifyContent: 'center', alignItems: 'center', paddingLeft: '10px', paddingTop: '10px', paddingRight: '10px', backgroundColor: 'white'}}/>
                 </div>
 
                 <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
