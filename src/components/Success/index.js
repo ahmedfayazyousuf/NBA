@@ -1,5 +1,4 @@
 import tick from '../images/tick.png'
-import basketball from '../images/basketball.jpg'
 
 const Success = () => {
     return(
